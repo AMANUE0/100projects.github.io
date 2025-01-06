@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio @ManuelDev</title>
+    <script src="https://kit.fontawesome.com/6788e71a64.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            background-color: #23253A;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+        header {
+            background-color: #1F2135;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 10px;
+            display: flex;
+            flex-direction: column ;            
+            position: relative;
+            
+        }
+        .menu-bar {
+            width: 20px;
+            position: absolute;
+            right: 10px;
+            top: 15px;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .logo {
+            margin: 0 auto;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        #menu {
+            display: none;
+        }
+        nav ul {
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            flex-direction: column;
+            width: 100%;
+            position: relative;
+        }
+
+        nav > ul > a {
+            color: white;
+            background-color: #161725;
+            width: 100%;
+            margin: 2px auto;
+            padding: 10px 0;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        nav > ul > a:hover {
+            background-color: #191b2c;
+            color: #888888;
+        }
+        .contain {
+            padding: 10px;
+            background-color: red;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="logo" href="#" >Manu.dev</a>
+        <i class="fas fa-bars menu-bar"></i>
+        <nav id="menu">
+            <ul>
+                <a href="#">Home</a>
+                <a href="#">Services</a>
+                <a href="#">skills</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </ul>
+        </nav>
+    </header>
+    <main class="contain">
+            <h1>Manuel Balderass</h1>
+    </main>
+    <footer>
+        
+    </footer>
+    <script>
+        const menuBar = document.querySelector('.menu-bar');
+        const nav = document.getElementById('menu');
+        
+
+        menuBar.addEventListener('click', () => {
+            if (nav.style.display === 'block') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'block';
+            }
+        });
+    </script>
+    
+</body>
+</html>

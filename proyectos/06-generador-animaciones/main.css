@@ -1,0 +1,227 @@
+body {
+    background-color: #171522;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+header {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+#menu-bar {
+    margin: 0 auto;
+}
+#logo {
+    font-size: 1rem;
+    margin: 0 auto;
+}
+.logoCSS {
+    padding: 13px 3px 4px 5px;
+    background-color: #663399;
+    border-radius: 0 7px 7px 7px
+}
+#author-name {
+    text-decoration: none;
+    margin: 0 auto;
+    font-weight: bold;
+    color: #0754c7;
+}
+#sidebar {
+    background-color: #0c0b14;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    min-height: 100vh;
+    min-width: 150px;
+    max-width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    z-index: 2;
+}
+#close-menu {
+    width: 100%;
+}
+#sidebar > section {
+    display: flex;
+    flex-direction: column;
+}
+.btn-menu, #menu-bar {
+    background-color: #11101b;
+    border: 0;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    transition: .3s;
+}
+.btn-menu {
+    width: 100%;
+    margin-bottom: 1px;
+}
+.btn-menu:hover, #menu-bar:hover {
+    cursor: pointer;
+    background-color: #191825;
+    font-size: .9rem;
+}
+.btn-menu:focus {
+    border: 1px solid #0754c7 ;
+    border-radius: 5px;
+    background-color: #211f30;
+
+}
+.content {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.preview {
+    background-color: #0c0b14;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subjet-animation  {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: .5s;
+    
+}
+.input-element:focus {
+    outline: none;
+} 
+.section-menu {
+    background-color: #11101b;
+    border: 0;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    transition: .3s;
+}
+
+.section-menu:hover {
+    cursor: pointer;
+    background-color: #302e41;
+    font-size: .9rem;
+}
+
+.section-menu:focus {
+    background-color: #302e41;
+    font-size: .9rem;
+}
+
+summary {
+    font-size:.8rem;
+}
+#background-color-input {
+    width: 100%;
+    background-color: #0c0b14;
+    border-radius: 10px;
+    border: 0;
+}
+#test {
+    font-weight: bold;
+    color: white;
+    transition: .3s;
+    margin: 5px 0;
+    animation: test-button 5s ease infinite;
+}
+
+@keyframes test-button {
+    0% {
+        background-color: yellow;
+        box-shadow: 0 0 3px yellow;
+    }
+    10% {
+        background-color: orange;
+        box-shadow: 0 0 3px orange;
+    }
+    30% {
+        background-color: red;
+        box-shadow: 0 0 3px red;
+    }
+    40% {
+        background-color: blue;
+        box-shadow: 0 0 3px blue;
+    }
+    60% {
+        background-color: purple;
+        box-shadow: 0 0 3px purple;
+    }
+    80% {
+        background-color: green;
+        box-shadow: 0 0 3px green;
+    }
+    100% {
+        background-color: yellow;
+        box-shadow: 0 0 3px yellow
+    }
+    
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+        animation-timing-function: ease-in-out;
+    }
+    25% {
+        transform: translateY(-20px);
+        animation-timing-function: ease-out;
+    }
+    50% {
+        transform: translateY(0);
+        animation-timing-function: ease-in;
+    }
+    75% {
+        transform: translateY(-10px);
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes flash {
+    0%, 100% {
+        opacity: 1; /* Totalmente visible */
+    }
+    50% {
+        opacity: 0; /* Completamente invisible */
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1); /* Tamaño normal */
+        opacity: 1; /* Totalmente visible */
+    }
+    50% {
+        transform: scale(1.1); /* Aumenta ligeramente de tamaño */
+        opacity: 0.8; /* Ligera reducción de opacidad */
+    }
+}
+
+.bounce {
+    animation: bounce 1s infinite;
+}
+
+.flash {
+    animation: flash 1s infinite;
+}
+
+.pulse {
+    animation: pulse 1s infinite;
+}
+@media (max-width: 350px) {
+    #sidebar {
+        width: 100%;
+        position: absolute;
+    }
+    .content {
+    }
+}

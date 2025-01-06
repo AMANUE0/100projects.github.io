@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 | Calculadora</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #272D4F;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .contain {
+            margin: 10px auto;
+            max-width: 700px;
+        }
+        .btns {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3px;
+        }
+        .btn {
+            padding: 30px 15px;
+            background-color: #343957;
+            text-align: center;
+            border-radius: 2px;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            border: 0;
+        }
+        .btn:hover {
+            cursor: pointer;
+            background-color: #393f5c;
+        }
+        .red {
+            color: #FF3664;
+        }
+        .bgred {
+            background-color: #FF3664;
+        }
+
+        .bgred:hover {
+            background-color: #FF4D6D;
+        }   
+        .result {
+            grid-column-start: 4;
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
+        .clear {
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+
+        .result-operation {
+            background-color: #343957;
+            color: white;
+            padding: 10px;
+            border-radius: 3px;
+            text-align: right;
+            font-size: 1.5rem;
+            margin: 10px auto;
+            overflow: scroll;
+            text-align: end;
+        }   
+        .result-operation::-webkit-scrollbar {
+            display: none;
+
+        }
+        .result-operation h1 {
+            margin: 0;
+            padding: 0;
+        }
+        .result-operation h5 {
+            margin: 0;
+            padding: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <main class="contain">
+        <div  class="result-operation">
+            <h5 class="operation"></h4>
+            <h1 class="result-complete">0</h1>
+        </div>
+        <section class="btns">
+            <button class="btn clear-all red">C</button>
+            <button class="btn divition red">/</button>
+            <button class="btn x red">X</button>
+            <button class="btn minus red">-</button>
+            <button class="btn num-7">7</button>
+            <button class="btn num-8">8</button>
+            <button class="btn num-9">9</button>
+            <button class="btn plus red">+</button>
+            <button class="btn num-4">4</button>
+            <button class="btn num-5">5</button>
+            <button class="btn num-6">6</button>
+            <button class="btn result bgred">=</button>
+            <button class="btn num-1">1</button>
+            <button class="btn num-2">2</button>
+            <button class="btn num-3">3</button>
+            <button class="btn num-0">0</button>
+            <button class="btn point">.</button>
+            <button class="btn clear">⌫</button>
+        </section>
+    </main>
+
+    <!----------------------->
+    <script>
+        // functions
+        let contain = document.getElementsByClassName("contain") [0];
+        let clearALL = document.getElementsByClassName("clear-all")[0];
+        let result = document.querySelector(".result");
+        let clear = document.querySelector(".clear");
+        let operation = document.querySelector(".operation");
+        let resultComplete = document.querySelector(".result-complete");
+        let btns = document.querySelectorAll(".btn");
+        // operators
+        let divition = document.querySelector(".divition");
+        let x = document.querySelector(".x");
+        let minus = document.querySelector(".minus");
+        let plus = document.querySelector(".plus");
+        // numbers
+        let zero = document.getElementsByClassName("num-0")[0];
+        let one = document.getElementsByClassName("num-1")[0];
+        let two = document.getElementsByClassName("num-2")[0];
+        let three = document.getElementsByClassName("num-3")[0];
+        let four = document.getElementsByClassName("num-4")[0];
+        let five = document.getElementsByClassName("num-5")[0];
+        let six = document.getElementsByClassName("num-6")[0];
+        let seven = document.getElementsByClassName("num-7")[0];
+        let eight = document.getElementsByClassName("num-8")[0];
+        let nine = document.getElementsByClassName("num-9")[0];
+        
+       
+        // point
+        let point = document.getElementsByClassName("point")[0];
+
+        zero.addEventListener("click", () => {
+            operation.innerHTML += "0";
+        });
+        one.addEventListener("click", () => {
+            operation.innerHTML += "1";
+        });
+        two.addEventListener("click", () => {
+            operation.innerHTML += "2";
+        });
+        three.addEventListener("click", () => {
+            operation.innerHTML += "3";
+        });
+        four.addEventListener("click", () => {
+            operation.innerHTML += "4";
+        });
+        five.addEventListener("click", () => {
+            operation.innerHTML += "5";
+        });
+        six.addEventListener("click", () => {
+            operation.innerHTML += "6";
+        });
+        seven.addEventListener("click", () => {
+            operation.innerHTML += "7";
+        });
+        eight.addEventListener("click", () => {
+            operation.innerHTML += "8";
+        });
+        nine.addEventListener("click", () => {
+            operation.innerHTML += "9";
+        });
+
+        // function
+        clearALL.addEventListener("click", () => {
+            operation.innerHTML = "";
+            resultComplete.innerHTML = "";
+        });
+        //operators 
+        divition.addEventListener("click", () => {
+            operation.innerHTML += "/";
+        });
+        x.addEventListener("click", () => {
+            operation.innerHTML += "*";
+        });
+        minus.addEventListener("click", () => {
+            operation.innerHTML += "-";
+        });
+        plus.addEventListener("click", () => {
+            operation.innerHTML += "+";
+        });
+        // clear
+        clear.addEventListener("click", () => {
+            operation.innerHTML = operation.innerHTML.slice(0, -1);
+        });
+        //point
+        point.addEventListener("click", () => {
+            operation.innerHTML += ".";
+        });
+        // result
+        result.addEventListener("click", () => {
+            resultComplete.innerHTML = eval(operation.innerHTML);
+        });
+    </script>
+</body>
+</html>

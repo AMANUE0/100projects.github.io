@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>06 | Generator of animations</title>
+</head>
+<body>
+    <header>
+        <button id="menu-bar"  >Menu</button>
+        <h1 id="logo">Animation <span class="logoCSS">CSS</span></h1>
+        <a href="#" id="author-name">By Manuel</a>
+    </header>
+    
+    <main class="content">
+        <nav id="sidebar" >
+            <button id="close-menu" class="btn-menu">Close x</button>
+            <!---------------------------------------->
+            <section class="edit-element">
+                <h4>Style Element</h4>
+                <details>
+                    <summary class="section-menu">Border</summary>
+                    <input type="text" name="border" id="border-input" placeholder="BORDER" class="btn-menu input-element">
+                </details>
+                <details>
+                    <summary class="section-menu">Border radius</summary>
+                    <input type="text" name="border-radius" id="border-radius-input" placeholder="BORDER" class="btn-menu input-element">
+                </details>
+                <details>
+                    <summary class="section-menu">Background color</summary>
+                    <input type="color" name="background-color" id="background-color-input"  class="input-element">
+                </details>
+                <details>
+                    <summary class="section-menu">width</summary>
+                    <input type="text" name="width" id="width-input" placeholder="HEIGTH" class="btn-menu input-element">
+                </details>
+                <details>
+                    <summary class="section-menu">heigth</summary>
+                    <input type="text" name="heigth" id="heigth-input" placeholder="HEIGTH" class="btn-menu input-element">
+                </details>
+            </section>
+            <button id="test" class="btn-menu">APPLY</button>
+            <!---------------------------------------->
+            <section class="elements" >
+                <h3>Elements</h3>
+                <button class="btn-menu element father">ELEMENT FATHER</button>
+                <button class="btn-menu element child">ELEMENT CHILD</button>
+                <button class="btn-menu element main">ELEMENT MAIN</button>
+            </section>
+            <!---------------------------------------->
+            <section class="events" >
+                <h3>Events</h3>
+                <button class="btn-menu event hover">HOVER</button>
+            </section>
+            <!---------------------------------------->
+            <section class="animation" >
+                <h3>Animations</h3>
+                <button class="btn-menu animation-bounce bounce">BOUNCE</button>
+                <button class="btn-menu animation-flash flash">FLASH</button>
+                <button class="btn-menu animation-pulse pulse">PULSE</button>
+            </section>
+            <!---------------------------------------->
+        </nav>
+        <section class="preview">
+            <div class="subjet-animation" ></div>
+        </section>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>

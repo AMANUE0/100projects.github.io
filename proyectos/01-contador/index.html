@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 | Contador de clicks</title>
+</head>
+<body>
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(235, 235, 235);
+        }
+        section {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 1px black;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 100px auto;
+        }
+        .contador {
+            color: rgb(12, 92, 212);
+            font-weight: bold;
+            font-size: 4rem;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: white;
+            border-radius: 5px;
+            border: 1px solid black;
+            box-shadow: 0 0 2px black;
+            font-weight: bold;
+        }
+        
+        .btn:hover {
+            cursor: pointer;
+            color: white;
+            background-color:rgb(12, 92, 212);
+            
+        }
+        .titile {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(12, 92, 212);
+        }
+    </style>
+    <!--            -->
+    <main class="contain">
+        <section>
+            <h1 class="titile">Revienta ese boton!</h1>
+            <h2 class="contador">0</h2>
+            <button class="btn">Click me!</button>
+        </section>
+    </main>
+    <!--            -->
+    <script>
+        let btn = document.querySelector('.btn');
+        let contador = document.querySelector(".contador");
+        let click = 0;
+        
+        function cambiarColor() {
+            if (click == 100) {
+                contador.style.color = "red";
+            } 
+            else if (click == 200) {
+                contador.style.color = "orange";
+            }
+
+            else if (click == 500) {
+                contador.style.color = "blue";
+            }
+
+        }
+        
+        btn.addEventListener("click", () => {
+            click += 1;
+            contador.textContent = click;
+            cambiarColor();
+        });
+    </script>
+</body> 
+</html>

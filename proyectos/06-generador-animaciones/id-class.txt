@@ -1,0 +1,5 @@
+border-input
+border-radius-input
+background-color-input
+width-input
+heigth-input
